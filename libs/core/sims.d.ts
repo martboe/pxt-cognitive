@@ -109,5 +109,15 @@ declare namespace sprites {
     function createSprite(): Sprite;
 
 }
+declare namespace cognitive {
+    /**
+     * Loads an image
+     * @param imageNumber identifies the umage
+     */
+    //% block="loadImage (ms) %loadImage" blockId=loadImage
+    //% shim=cognitive::loadImageAsync promise
+    function loadImage(path: string): void;
+
+}
 
 // Auto-generated. Do not edit. Really.

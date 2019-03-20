@@ -26,6 +26,7 @@ namespace pxsim {
         public hareElement: SVGCircleElement;
         public sprite : Sprite;
         public hare: Sprite;
+        public imagePath: string;
         
         constructor() {
             super();
@@ -33,7 +34,7 @@ namespace pxsim {
             this.element = <SVGSVGElement><any>document.getElementById('svgcanvas');
             this.spriteElement = <SVGCircleElement>this.element.getElementById('svgsprite');
             this.hareElement = <SVGCircleElement>this.element.getElementById('svgsprite2');
-            this.sprite = new Sprite()
+            this.sprite = new Sprite();
             this.hare = new Sprite();
         }
         
@@ -50,6 +51,15 @@ namespace pxsim {
 
             this.hareElement.cx.baseVal.value = this.hare.x;
             this.hareElement.cy.baseVal.value = this.hare.y;
+            
+            // var canvas = <HTMLCanvasElement>document.getElementById('svgcanvas');
+            // var context = canvas.getContext("2d");
+
+            // var myImg = new Image();
+            // myImg.onload = function() {
+            //     context.drawImage(myImg, 0, 0);
+            // };
+            // myImg.src = this.imagePath;
         }
     }
 }

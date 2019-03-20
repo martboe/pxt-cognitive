@@ -145,3 +145,19 @@ namespace pxsim.sprites {
         return new Sprite();
     }
 }
+
+namespace pxsim.cognitive {
+    /**
+     * Loads an image
+     * @param imageNumber identifies the umage
+     */
+    //% block="loadImage (ms) %loadImage" blockId=loadImage
+    export function loadImageAsync(path: string) {
+
+        // load image
+        let b = board();
+        b.imagePath = path;
+
+        return Promise.delay(400)
+    }
+}
